@@ -84,3 +84,37 @@ body {
     font-size: 0.9rem;
   }
 }
+
+.sign-up-container {
+  /* height: 100%;
+  width: 100%; */
+  background-color: rgb(249 250 251);
+  padding-left: 60px;
+  
+  & .form-container {
+    background-color: rgb(255 255 255);
+
+    & h2 {
+
+    }
+
+    & .input-row {
+      display: flex;
+      gap: 100px;
+
+      & .input-container {
+        text-transform: uppercase;
+
+
+        label {
+          display: block;
+        }
+
+        input {
+
+        }
+      }
+    }
+    
+  }
+}
