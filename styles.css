@@ -35,3 +35,52 @@ img {
   display: block;
   max-inline-size: 100%;
 }
+
+
+/* html {
+    font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);
+} */
+
+body {
+    font-size: calc(16px + 1vw);
+    height: 100vh;
+}
+
+.main {
+  display: flex;
+  height: 100%;
+}
+
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("./images/background.jpg");
+  background-size: cover;
+  width: 60vh;
+
+  & .logo-container {
+    position: relative;
+    top: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(0 0 0 / 40%);
+
+    & h1 {
+      color: white;
+      font-family: norsebold, sans-serif;
+      font-size: 6rem;
+    }
+  }
+
+  & p,
+  a {
+    position: relative;
+    bottom: 1%;
+    color: rgb(238 240 233);
+    font-size: 0.9rem;
+  }
+}
