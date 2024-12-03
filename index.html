@@ -28,10 +28,10 @@
         </p>
       </div>
       <div class="sign-up-container">
-        <div class="sign-up-introduction">
+        <div class="introduction-container">
           <p>
             This is not a real online service! You know you need something like
-            this in your like to help realize your deepest dreams.
+            this in your life to help you realize your deepest dreams.
           </p>
           <p>Sign up <em>now</em> to get started.</p>
           <p>You <em>know</em> you want to.</p>
@@ -46,6 +46,7 @@
                   type="text"
                   id="first_name"
                   name="first_name"
+                  autofocus
                   required
                 />
               </div>
@@ -81,6 +82,7 @@
                   type="password"
                   id="user_password"
                   name="user_password"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                   required
                 />
               </div>
@@ -90,14 +92,18 @@
                   type="password"
                   id="user_password_confirm"
                   name="user_password_confirm"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                   required
                 />
               </div>
             </div>
           </form>
         </div>
-        <button form="sign-up-form">Create Account</button>
-        <p>Already have an account? <a href="">Log in</a></p>
+
+        <div class="button-container">
+          <button form="sign-up-form">Create Account</button>
+          <p>Already have an account? <a href="">Log in</a></p>
+        </div>
       </div>
     </div>
   </body>

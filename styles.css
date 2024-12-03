@@ -58,7 +58,8 @@ body {
   align-items: center;
   background-image: url("./images/background.jpg");
   background-size: cover;
-  width: 60vh;
+  width: 40vw;
+  min-width: 250px;
 
   & .logo-container {
     position: relative;
@@ -86,35 +87,86 @@ body {
 }
 
 .sign-up-container {
-  /* height: 100%;
-  width: 100%; */
+  width: 100%;
   background-color: rgb(249 250 251);
-  padding-left: 60px;
   
+
+  & .introduction-container {
+    padding: 100px 0 0 60px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    max-inline-size: 66ch;
+
+
+    & p:last-child {
+      margin-top: 28px;
+      margin-bottom: 55px;
+    }
+  }
+
   & .form-container {
+    padding: 20px 0;
     background-color: rgb(255 255 255);
+    box-shadow: 3px 3px 7px rgb(173 168 168);
+    padding-left: 60px;
 
     & h2 {
-
+      font-weight: bold;
+      font-size: 1.5rem;
+      padding-bottom: 25px;
     }
 
     & .input-row {
+      position: relative;
       display: flex;
-      gap: 100px;
+      gap: 150px;
+      margin-bottom: 25px;
 
       & .input-container {
         text-transform: uppercase;
 
 
-        label {
+        & label {
           display: block;
+          font-size: 0.9rem;
         }
 
-        input {
-
+        & input {
+          font-size: 1.1rem;
+          border: 1px solid #E5E7EB;
+          border-radius: 4px;
+          padding: 6px 12px;
         }
+
+        & input:hover,
+        & input:focus {
+          border: 1.8px solid blue;
+          outline: none;
+          box-shadow: 2px 2px 7px rgb(173 168 168);
+        }
+
+        & input:user-invalid {
+          border: 1.8px solid red;
+        }
+      }
+
+      & .input-container:has(input[id="user_password"])::before {
+        position: absolute;
+        content: "*Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters";
+        color: gray;
+        font-size: 0.8rem;
+        text-transform: none;
+        bottom: -22px;
+      }
+
+      & .input-container:has(input[id="user_password"]:user-valid)::before {
+        visibility: hidden;
       }
     }
     
+  }
+
+  & .button-container {
+    padding-left: 60px;
   }
 }
