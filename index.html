@@ -51,8 +51,8 @@
                 />
               </div>
               <div class="input-container">
-                <label for="last_name">Last Name</label
-                ><input type="text" id="last_name" name="last_name" required />
+                <label for="last_name">Last Name (optional)</label
+                ><input type="text" id="last_name" name="last_name" />
               </div>
             </div>
             <div class="input-row">
@@ -62,17 +62,13 @@
                   type="email"
                   id="user_email"
                   name="user_email"
+                  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
                   required
                 />
               </div>
               <div class="input-container">
-                <label for="user_number">Phone Number</label
-                ><input
-                  type="tel"
-                  id="user_number"
-                  name="user_number"
-                  required
-                />
+                <label for="user_number">Phone Number (optional)</label
+                ><input type="tel" id="user_number" name="user_number" />
               </div>
             </div>
             <div class="input-row">

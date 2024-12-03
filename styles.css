@@ -40,6 +40,7 @@ img {
 /* html {
     font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);
 } */
+ 
 
 body {
     font-size: calc(16px + 1vw);
@@ -92,7 +93,7 @@ body {
   
 
   & .introduction-container {
-    padding: 100px 0 0 60px;
+    padding: 90px 0 0 60px;
     font-weight: bold;
     font-size: 1.5rem;
     max-inline-size: 66ch;
@@ -107,7 +108,7 @@ body {
   & .form-container {
     padding: 20px 0;
     background-color: rgb(255 255 255);
-    box-shadow: 3px 3px 7px rgb(173 168 168);
+    box-shadow: 3px 3px 7px rgb(0 0 0 / 30%);
     padding-left: 60px;
 
     & h2 {
@@ -138,17 +139,26 @@ body {
           padding: 6px 12px;
         }
 
-        & input:hover,
         & input:focus {
           border: 1.8px solid blue;
           outline: none;
-          box-shadow: 2px 2px 7px rgb(173 168 168);
+          box-shadow: 2px 2px 7px rgb(0 0 0 / 20%);
         }
 
         & input:user-invalid {
           border: 1.8px solid red;
         }
       }
+
+      & .input-container:has(input[type="email"])::before {
+        position: absolute;
+        content: "*Example: characters@characters.domain";
+        color: gray;
+        font-size: 0.8rem;
+        text-transform: none;
+        bottom: -22px;
+      }
+
 
       & .input-container:has(input[id="user_password"])::before {
         position: absolute;
@@ -164,9 +174,45 @@ body {
       }
     }
     
+    & .input-row:nth-of-type(2) {
+      margin-bottom: 45px;
+    }
   }
 
   & .button-container {
     padding-left: 60px;
+
+    & button {
+      background-color: #596D48;
+      margin: 40px 0 25px 0;
+      font-size: 1.2rem;
+      padding: 16px 45px;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-weight: bold;
+      box-shadow: 3px 3px 7px rgb(0 0 0 / 30%);
+      cursor: pointer;
+    }
+
+    & button:hover {
+      background-color: #67874c;
+    }
+
+    & button:active {
+      background-color: #526442;
+      box-shadow: inset 3px 3px 7px rgb(0 0 0 / 50%);
+      transform: translateY(1px);
+    }
+
+    & p {
+      font-size: 1.1rem;
+
+      & a {
+        color: #596D48;
+        font-weight: bold;
+        text-decoration: none;
+      }
+    }
   }
 }
